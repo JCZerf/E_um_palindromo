@@ -1,14 +1,13 @@
-
-
 const essaPalabraEUmPalindromo = function(){
-    let palavra = prompt("Qual palavra ou frase você gostaria de saber se é um palíndromo?");
+    let palavra = document.getElementById("texto_Teste").value;
+    console.log(palavra);
     let separandoAsLetrasDaPalavra = palavra.split("");
     let palavraInvertida = separandoAsLetrasDaPalavra.reverse();
+    let escreveResposta = document.querySelector("p");
     palavraInvertida = palavraInvertida.join("");
     if (palavra == palavraInvertida){
-        console.log("A palavra " + palavra + " é um palíndromo!");
+        escreveResposta.innerText = "A palavra " + palavra + " é um palíndromo!";
     } else {
-        console.log("A palavra " + palavra + " não é um palíndromo!");
+        escreveResposta.innerText = "A palavra " + palavra + " não é um palíndromo!";
     }
 }
-essaPalabraEUmPalindromo();
